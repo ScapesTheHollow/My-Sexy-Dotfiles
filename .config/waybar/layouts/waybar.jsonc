@@ -1,0 +1,91 @@
+{
+  "layer": "top",
+  "output": ["*"],
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "include": [
+    "$XDG_CONFIG_HOME/waybar/modules/*json*", // This can be used on waybar-git
+    "$XDG_DATA_HOME/waybar/modules/*json*" // This can be used on waybar-git
+    // "$XDG_CONFIG_HOME/waybar/includes/includes.json" // This will be deprecated if waybar 0.12.0 is released on debian
+  ],
+  "modules-left": ["group/leaf-inverse", "group/pill-in#left"],
+  "modules-center": ["group/pill#1", "group/pill-in#center", "group/pill#2"],
+  "modules-right": ["group/pill#3", "group/leaf#2", "group/leaf#3", "group/leaf#4", "group/leaf#5"],
+
+  "group/leaf-inverse": {
+    "orientation": "inherit",
+    "modules": [
+      "hyprland/workspaces",
+      "wlr/taskbar"
+    ]
+  },
+  "group/pill-in#left": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/spotify",
+      "custom/cava"
+    ]
+  },
+  "group/pill#1": {
+    "orientation": "inherit",
+    "modules": [
+      "idle_inhibitor",
+      "custom/weather"
+    ]
+  },
+  "group/pill-in#center": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/github_hyde",
+      "clock"
+    ]
+  },
+  "group/pill#2": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/updates",
+      "power-profiles-daemon"
+    ]  
+  },
+  "group/pill#3": {
+    "orientation": "inherit",
+    "modules": [
+      "privacy",
+      "tray"
+    ]
+  },
+  "group/leaf#2": {
+    "orientation": "inherit",
+    "modules": [
+      "cpu",
+      "memory",
+      "custom/cpuinfo",
+      "custom/gpuinfo"
+    ]
+  },
+  "group/leaf#3": {
+    "orientation": "inherit",
+    "modules": [
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "custom/dunst"
+    ]
+  },
+  "group/leaf#4": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/clipboard"
+    ]
+  },
+  "group/leaf#5": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/hyde-menu",
+      "custom/power"
+    ]
+  }
+}
