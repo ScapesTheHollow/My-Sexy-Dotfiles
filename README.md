@@ -65,4 +65,3 @@ yay -S vesktop spotify zen-browser visual-studio-code-bin
 
 MIT — Feel free to fork, steal, or remix.
 
-```
